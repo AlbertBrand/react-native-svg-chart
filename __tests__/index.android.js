@@ -1,12 +1,12 @@
+// @flow
+// eslint-env jest
 import 'react-native';
-import React from 'react';
-import Index from '../index.android.js';
-
-// Note: test renderer must be required after react-native.
 import renderer from 'react-test-renderer';
+import React from 'react';
+import Index from '../index.android';
 
 it('renders correctly', () => {
-  const tree = renderer.create(
-    <Index />
+  renderer.create(
+    <Index />,
   );
 });
