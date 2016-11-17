@@ -1,0 +1,3 @@
+rootProject.name = 'svgChart'
+
+include ':app'
