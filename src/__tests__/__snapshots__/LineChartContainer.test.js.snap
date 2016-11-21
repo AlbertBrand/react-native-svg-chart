@@ -1,0 +1,76 @@
+exports[`LineChartContainer renders chart 1`] = `
+<View
+  onLayout={[Function]}
+  style={undefined}>
+  <LineChart
+    chartPoints={
+      Array [
+        Array [
+          1,
+          4.8,
+          Object {
+            "x": 1,
+            "y": 2.4,
+          },
+        ],
+        Array [
+          2,
+          9.8,
+          Object {
+            "x": 2,
+            "y": 4.9,
+          },
+        ],
+        Array [
+          4,
+          6.2,
+          Object {
+            "x": 4,
+            "y": 3.1,
+          },
+        ],
+      ]
+    }
+    dashLineColor="gray"
+    dataLineColor="blue"
+    height={200}
+    scale={[Function]}
+    textStyle={
+      Object {
+        "color": "black",
+        "fontFamily": "arial",
+        "fontSize": 10,
+      }
+    }
+    width={300}
+    xAccessor={[Function]}
+    xLabel={[Function]}
+    xMax={4}
+    xMin={1}
+    xOffset={20}
+    xScale={[Function]}
+    yAccessor={[Function]}
+    yLabel={[Function]}
+    yMax={10}
+    yMin={4}
+    yOffset={10}
+    yScale={[Function]}
+    yTickPoints={
+      Array [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+      ]
+    } />
+</View>
+`;
+
+exports[`LineChartContainer renders empty view 1`] = `
+<View
+  onLayout={[Function]}
+  style={undefined} />
+`;

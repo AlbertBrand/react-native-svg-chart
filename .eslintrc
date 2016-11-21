@@ -9,6 +9,7 @@
   },
   "extends": ["airbnb"],
   "rules": {
+    "react/no-unused-prop-types": 0,
     "react/jsx-filename-extension": 0,
     "react/prefer-stateless-function": 1,
     "react-native/no-unused-styles": 2,

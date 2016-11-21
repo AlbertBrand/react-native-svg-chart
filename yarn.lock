@@ -2192,7 +2192,7 @@ first-chunk-stream@^2.0.0:
   dependencies:
     readable-stream "^2.0.2"
 
-flat-cache@1.0.10, flat-cache@^1.0.9:
+flat-cache@1.0.10:
   version "1.0.10"
   resolved "https://registry.yarnpkg.com/flat-cache/-/flat-cache-1.0.10.tgz#73d6df4a28502160a05e059544a6aeeae8b0047a"
   dependencies:
@@ -2201,7 +2201,7 @@ flat-cache@1.0.10, flat-cache@^1.0.9:
     read-json-sync "^1.1.0"
     write "^0.2.1"
 
-flat-cache@^1.2.1:
+flat-cache@^1.0.9, flat-cache@^1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/flat-cache/-/flat-cache-1.2.1.tgz#6c837d6225a7de5659323740b36d5361f71691ff"
   dependencies:
@@ -3702,17 +3702,13 @@ micromatch@^2.3.11, micromatch@^2.3.7:
     parse-glob "^3.0.4"
     regex-cache "^0.4.2"
 
-"mime-db@>= 1.24.0 < 2":
-  version "1.25.0"
-  resolved "https://registry.yarnpkg.com/mime-db/-/mime-db-1.25.0.tgz#c18dbd7c73a5dbf6f44a024dc0d165a1e7b1c392"
+"mime-db@>= 1.24.0 < 2", mime-db@~1.24.0:
+  version "1.24.0"
+  resolved "https://registry.yarnpkg.com/mime-db/-/mime-db-1.24.0.tgz#e2d13f939f0016c6e4e9ad25a8652f126c467f0c"
 
 mime-db@~1.23.0:
   version "1.23.0"
   resolved "https://registry.yarnpkg.com/mime-db/-/mime-db-1.23.0.tgz#a31b4070adaea27d732ea333740a64d0ec9a6659"
-
-mime-db@~1.24.0:
-  version "1.24.0"
-  resolved "https://registry.yarnpkg.com/mime-db/-/mime-db-1.24.0.tgz#e2d13f939f0016c6e4e9ad25a8652f126c467f0c"
 
 mime-types@2.1.11, mime-types@~2.1.11, mime-types@~2.1.6, mime-types@~2.1.7, mime-types@~2.1.9:
   version "2.1.11"
@@ -4083,6 +4079,10 @@ path-type@^1.0.0:
     graceful-fs "^4.1.2"
     pify "^2.0.0"
     pinkie-promise "^2.0.0"
+
+paths-js@0.4.4:
+  version "0.4.4"
+  resolved "https://registry.yarnpkg.com/paths-js/-/paths-js-0.4.4.tgz#d5c361b2c4448685b9350fa86ef8f23b3e3679e5"
 
 pause@0.1.0:
   version "0.1.0"
