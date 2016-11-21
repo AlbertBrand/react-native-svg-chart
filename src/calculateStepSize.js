@@ -12,7 +12,7 @@ export default function calculateStepSize(range: number, minSteps: number) {
 
   // get the magnitude of the step size
   const mag = Math.floor(Math.log(tempStep) / Math.log(10));
-  const magPow = Math.pow(10, mag);
+  const magPow = 10 ** mag;
 
   // calculate most significant digit of the new step size
   let magMsd = Math.floor(tempStep / magPow);

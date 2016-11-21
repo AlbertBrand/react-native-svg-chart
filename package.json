@@ -17,6 +17,7 @@
   },
   "devDependencies": {
     "babel-jest": "17.0.2",
+    "babel-plugin-transform-exponentiation-operator": "6.8.0",
     "babel-preset-react-native": "1.9.0",
     "eslint": "3.10.2",
     "eslint-config-airbnb": "13.0.0",
