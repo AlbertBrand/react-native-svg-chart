@@ -8,8 +8,6 @@ import LineChartContainer from './LineChartContainer';
 
 const style = StyleSheet.create({
   chart: {
-    paddingVertical: 100,
-    width: 320,
     height: 300,
   },
 });
@@ -26,8 +24,13 @@ export default class App extends Component {
         [5, 1],
         [6, 54],
         [7, 96],
-        [8, 23],
-        [9, 44],
+        [8, 233],
+        [9, 67],
+        [10, 1],
+        [11, 524],
+        [12, 96],
+        [13, 223],
+        [14, 443],
       ],
       options: {
         dashLineColor: '#d0d0d0',

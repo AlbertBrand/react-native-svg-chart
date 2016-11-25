@@ -1,5 +1,5 @@
 /* @flow */
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import { View } from 'react-native';
 import { minBy, maxBy } from 'paths-js/ops';
 import linear from 'paths-js/linear';
@@ -22,7 +22,7 @@ export type Accessor = (value: any, idx: number) => number;
 type Event = {
   nativeEvent: {
     layout: {
-      width:number,
+      width: number,
       height: number
     }
   }
@@ -48,12 +48,10 @@ const MARGIN_LEFT = 20;
 
 const MIN_TICK_COUNT = 5;
 
-export default class LineChartContainer extends Component {
+export default class LineChartContainer extends PureComponent {
   state: {
-    layout?: {
-      width: number,
-      height: number,
-    }
+    width?: number,
+    height?: number,
   } = {};
   props: Props;
   handle: number;
@@ -116,11 +114,16 @@ export default class LineChartContainer extends Component {
   render() {
     return (
       <View
-        onLayout={(e:Event) => this.setState(e.nativeEvent)}
+        onLayout={(e:Event) => {
+          this.setState({
+            width: e.nativeEvent.layout.width,
+            height: e.nativeEvent.layout.height,
+          });
+        }}
         style={this.props.style}
       >
-        {this.state.layout ?
-          this.renderChart(this.state.layout.width, this.state.layout.height) : null}
+        {this.state.width && this.state.height ?
+          this.renderChart(this.state.width, this.state.height) : null}
       </View>
     );
   }
