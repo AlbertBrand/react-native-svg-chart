@@ -9,7 +9,8 @@ import App from '../App';
 jest.mock('../LineChart', () => 'LineChart');
 
 it('renders correctly', () => {
-  renderer.create(
+  const tree = renderer.create(
     <App />,
-  );
+  ).toJSON();
+  expect(tree).toMatchSnapshot();
 });

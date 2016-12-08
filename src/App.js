@@ -2,7 +2,6 @@
 import React, { Component } from 'react';
 import {
   StyleSheet,
-  View,
 } from 'react-native';
 import LineChartContainer from './LineChartContainer';
 
@@ -47,9 +46,7 @@ export default class App extends Component {
       },
     };
     return (
-      <View>
-        <LineChartContainer {...chartProps} style={style.chart} />
-      </View>
+      <LineChartContainer {...chartProps} style={style.chart} />
     );
   }
 }

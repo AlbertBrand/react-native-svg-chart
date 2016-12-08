@@ -1,0 +1,9 @@
+exports[`test renders correctly 1`] = `
+<View
+  onLayout={[Function]}
+  style={
+    Object {
+      "height": 300,
+    }
+  } />
+`;
