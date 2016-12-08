@@ -1,8 +1,9 @@
 // @flow
 // eslint-env jest
 import 'react-native';
-import renderer from 'react-test-renderer';
 import React from 'react';
+import renderer from 'react-test-renderer';
+
 import App from '../App';
 
 jest.mock('../LineChart', () => 'LineChart');
