@@ -1,8 +1,9 @@
 /* @flow */
 import React, { PureComponent } from 'react';
 import { View } from 'react-native';
-import { minBy, maxBy } from 'paths-js/ops';
-import linear from 'paths-js/linear';
+import { extent } from 'd3-array';
+import { scaleLinear } from 'd3-scale';
+
 import LineChart from './LineChart';
 import calculateStepSize from './calculateStepSize';
 
@@ -70,10 +71,8 @@ export default class LineChartContainer extends PureComponent {
     const chartPoints = this.props.data.map(transform);
 
     // determine min and max
-    const xMin = minBy(chartPoints, point => point[0]);
-    const xMax = maxBy(chartPoints, point => point[0]);
-    const yMin = minBy(chartPoints, point => point[1]);
-    const yMax = maxBy(chartPoints, point => point[1]);
+    const [xMin, xMax] = extent(chartPoints, point => point[0]);
+    const [yMin, yMax] = extent(chartPoints, point => point[1]);
 
     // calculate placement of ticks on y-axis
     const yTickStep = calculateStepSize(yMax - yMin, MIN_TICK_COUNT);
@@ -85,8 +84,8 @@ export default class LineChartContainer extends PureComponent {
     }
 
     // create scaling functions for plot width and height
-    const xScale = linear([xMin, xMax], [0, plotWidth]);
-    const yScale = linear([yTickMin, yTickMax], [plotHeight, 0]);
+    const xScale = scaleLinear().domain([xMin, xMax]).range([0, plotWidth]);
+    const yScale = scaleLinear().domain([yTickMin, yTickMax]).range([plotHeight, 0]);
     const scale = ([x, y]) => [xScale(x), yScale(y)];
 
     const chartProps = {

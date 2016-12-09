@@ -12,7 +12,7 @@ import {
   Path,
   Rect,
 } from 'react-native-svg';
-import Polygon from 'paths-js/polygon';
+import { line } from 'd3-shape';
 
 import type { Points, PointScale } from './LineChartContainer';
 
@@ -64,10 +64,7 @@ export default class LinePath extends React.Component {
 
   render() {
     const scaledPoints = this.props.chartPoints.map(this.props.scale);
-    const polygon = Polygon({
-      points: scaledPoints,
-      closed: false,
-    }).path.print();
+    const d = line()(scaledPoints);
     const lastPoint = scaledPoints[scaledPoints.length - 1];
     return (
       <G>
@@ -82,7 +79,7 @@ export default class LinePath extends React.Component {
           </ClipPath>
         </Defs>
         <Path
-          d={polygon}
+          d={d}
           fill="none"
           stroke={this.props.dataLineColor}
           strokeWidth="2"

@@ -7,7 +7,9 @@
     "test": "jest"
   },
   "dependencies": {
-    "paths-js": "0.4.4",
+    "d3-array": "1.0.2",
+    "d3-scale": "1.0.4",
+    "d3-shape": "^1.0.4",
     "react": "15.4.1",
     "react-native": "0.39.1",
     "react-native-svg": "4.4.1"
